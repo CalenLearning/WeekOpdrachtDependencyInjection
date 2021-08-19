@@ -15,7 +15,7 @@ namespace WeekOpdrachtDependencyInjection.Controllers
         }
 
         [HttpGet]
-        [Route("{id}")]
+        [Route("id/{id}")]
         public IActionResult Get(int id)
         {
             var movie = movieService.Get(id);
@@ -23,7 +23,7 @@ namespace WeekOpdrachtDependencyInjection.Controllers
         }
 
         [HttpGet]
-        [Route("{name}")]
+        [Route("name/{name}")]
         public IActionResult Get(string name)
         {
             var movie = movieService.Get(name);
