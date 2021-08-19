@@ -17,7 +17,7 @@ namespace WeekOpdrachtDependencyInjection.Tests
             result = calculatePiService.Add(3);
 
             // Assert
-            Assert.Equal(Math.PI, result, 15);
+            Assert.Equal((Math.PI + 3), result);
         }
 
         [Fact]
@@ -31,7 +31,7 @@ namespace WeekOpdrachtDependencyInjection.Tests
             result = calculatePiService.Add(102);
 
             // Assert
-            Assert.Equal(105.1415926535897931, result, 15);
+            Assert.Equal((Math.PI + 102), result);
         }
     }
 }

@@ -14,9 +14,14 @@ namespace WeekOpdrachtDependencyInjection.Business
             new Movie { Id = 3, Title = "Kill Bill", ReleaseDate = new DateTime(2003,1,1)},
         };
 
-        public Movie GetById(int id)
+        public Movie Get(int id)
         {
             return Movies.Single(x=>x.Id == id);
+        }
+
+        public Movie Get(string name)
+        {
+            return Movies.Single(x => x.Title == name);
         }
     }
 }
